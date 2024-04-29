@@ -4,5 +4,6 @@ import lombok.Data;
 
 @Data
 public class Ejercicio1 {
-    private int temperatura;
+    private int hora;
+    private int minutos;
 }

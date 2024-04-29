@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head th:replace="fragment/fragment :: head">
   <meta charset="UTF-8">
-  <title>Ejercicio 1</title>
+  <title>Ejercicio 3</title>
 </head>
 <body>
 <nav th:replace="fragment/fragment :: menu"></nav>
@@ -11,21 +11,16 @@
           <div class="d-flex justify-content-center col-md-6">
               <div class="card">
                   <div class="card-header bg-dark text-white">
-                      Ejercicio 1
+                      Ejercicio 4
                   </div>
                   <div class="card-body">
-                      <h5 class="card-title">Ejercicio 1</h5>
+                      <h5 class="card-title">Ejercicio 4</h5>
 
-                      <form th:action="@{/ejercicio1}" th:object="${ejercicio1}" method="post">
-
-                          <div class="mb-3">
-                              <label class="form-label">Temperatura</label>
-                              <input th:field="*{hora}" type="text" name="hora" class="form-control">
-                          </div>
+                      <form th:action="@{/ejercicio4}" th:object="${ejercicio4}" method="post">
 
                           <div class="mb-3">
-                              <label class="form-label">Temperatura</label>
-                              <input th:field="*{minutos}" type="text" name="minutos" class="form-control">
+                              <label class="form-label">Numero</label>
+                              <input th:field="*{numero}" type="text" name="numero" class="form-control" min="1" max="27">
                           </div>
 
                           <div class="mb-3">
@@ -34,8 +29,8 @@
 
                       </form>
 
-                      <div class="alert alert-primary" th:if="${estado != null}">
-                          <p th:text="${estado}"></p>
+                      <div class="alert alert-primary" th:if="${rs != null}">
+                          <p th:text="${rs}"></p>
                       </div>
                   </div>
               </div>

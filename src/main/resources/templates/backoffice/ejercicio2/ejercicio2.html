@@ -16,16 +16,21 @@
                   <div class="card-body">
                       <h5 class="card-title">Ejercicio 1</h5>
 
-                      <form th:action="@{/ejercicio1}" th:object="${ejercicio1}" method="post">
+                      <form th:action="@{/ejercicio2}" th:object="${ejercicio2}" method="post">
 
                           <div class="mb-3">
-                              <label class="form-label">Temperatura</label>
-                              <input th:field="*{hora}" type="text" name="hora" class="form-control">
+                              <label class="form-label">Lado 1</label>
+                              <input th:field="*{lado1}" type="text" name="lado1" class="form-control">
                           </div>
 
                           <div class="mb-3">
-                              <label class="form-label">Temperatura</label>
-                              <input th:field="*{minutos}" type="text" name="minutos" class="form-control">
+                              <label class="form-label">Lado 2</label>
+                              <input th:field="*{lado2}" type="text" name="lado2" class="form-control">
+                          </div>
+
+                          <div class="mb-3">
+                              <label class="form-label">Lado 3</label>
+                              <input th:field="*{lado3}" type="text" name="lado3" class="form-control">
                           </div>
 
                           <div class="mb-3">
@@ -34,8 +39,8 @@
 
                       </form>
 
-                      <div class="alert alert-primary" th:if="${estado != null}">
-                          <p th:text="${estado}"></p>
+                      <div class="alert alert-primary" th:if="${rs != null}">
+                          <p th:text="${rs}"></p>
                       </div>
                   </div>
               </div>
